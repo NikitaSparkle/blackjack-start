@@ -6,7 +6,7 @@ import java.util.List;
 public class Hand {
     private final List<Card> cards;
 
-    public Hand(List<Card> cards) {
+    public Hand() {
         this.cards = new ArrayList<>();
     }
 
@@ -17,7 +17,9 @@ public class Hand {
     public int getValue(){
         int value=0;
         for(Card card: cards){
-            value+=card.getValue();
+            if(!card.isHide()){
+                value+=card.getValue();
+            }
         }
         return value;
     }
