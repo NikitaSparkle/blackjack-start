@@ -31,7 +31,10 @@ public class Game {
 
     public void play(){
         App.launch();
-
+        player.takeCard(deck.getOne());
+        player.takeCard(deck.getOne());
+        dealer.takeCard(deck.getOne());
+        dealer.takeCard(deck.getOne());
     }
 
     public void hit(){
